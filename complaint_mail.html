@@ -1,0 +1,57 @@
+
+{% extends 'layoutp.html' %}
+{% block body %}
+<body>
+<div class="container">
+<form method="post" action="{{ url_for('complaintbox')}}" enctype="multipart/form-data">
+
+
+<div class="row jumbotron table" style="border: 1px solid black">
+  <div class="col-md-2"></div>
+    <div class="col-md-8 col-md-offset-2">
+        <h3>Complaint Form:</h3><br>
+        <div class="form-group">
+            <label for="sel1">Select Sector:</label>
+           <select class="form-control" id="sel1" name="sel1">
+           <option value="">Select Sector</option>           
+           {% for area in areas %} 
+             <option value="{{area.email1}}">{{ area.Sector }}</option>
+           {% endfor %}
+           </select>
+        </div>
+
+        <div class="form-group">
+            <label for="sel1">Select Area:</label>
+           <select class="form-control" id="sel2" name="sel2" >
+                <option value="">Select Area</option>
+               {% for area in areas %}              
+                <option value="{{area.email2}}">{{ area.area }}</option>
+               {% endfor %}
+           </select>
+        </div>
+        
+        <div class="form-group">
+            <label >Complaint:</label>
+            <textarea rows="10" cols="60" id='complaint' name="complaint" required></textarea>
+        </div>
+       <div class="form-group">
+            <input type="file" class="btn btn-default btn-file" name="image" id="image" placeholder="choose files" >
+        </div> 
+        <br>
+        <input type="submit" class="btn btn-primary btn-block" value="Post">
+
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      <br><br><br><br><br><br>
+      <img src="static/Images/complaint.jpg" class="img-responsive">
+    </div>
+</div>
+
+</form>
+
+</center>
+
+</div>
+</body>
+{% endblock %}
+</html>

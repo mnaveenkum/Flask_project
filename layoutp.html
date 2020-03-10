@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<body id='a'>
+	{% include 'includes/design.html' %}
+	
+	    {% block body %}
+	    {% endblock %}
+</body>
+<footer class="container-fluid">
+	<p class="float-right"><a href="#">back to top</a></p>
+	<p>&copy;2018-2019 company,naveen. &middot;<a href="#">privacy</a>&middot;<a href="#">terms</a></p>
+</footer>
+<footer>
+	<style>
+		footer {
+			position: fixed;
+			bottom: 1px;
+			width: 100px;
+		}
+	</style>
+</footer>
+</html>

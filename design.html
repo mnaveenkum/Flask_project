@@ -1,0 +1,93 @@
+<div class="row" style="height: 100px">
+
+  <div class="col-sm-3"><img src="static/logos/ap.jpg" alt="project logo" class="rounded-circle" width="100px"></div>
+  <div class="col-sm-7 offset-0" style="align-items:center;border-radius:100px"><img src="static/logos/u.png" alt="middle logo" class="" style="width: 500px"></div>
+  <div class="col-sm-2"><img src="static/logos/cm.jpg" alt="right logo" class="" style="height: 100px"></div>
+</div>
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#" style="color:yellow ">RAISE<b style="color:white"> YOUR</b> VOICE</a>
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><b class="fa fa-home">Home</b> </span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about"><b>About</b></a>
+      </li>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><b>Services</b></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" style="color:yellow"><b>REVENUE </b></a>
+        <a class="dropdown-item" href="#" style="color:gray"><i>EDUCATION DEP</i></a>
+        <a class="dropdown-item" href="#" style="color:blue"><i>POLICE DEP</i></a>
+        <a class="dropdown-item" href="#" style="color:gray"><i>AGRICULTURAL DEP</i></a>
+        
+      </div>
+    </li>
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><b>District</b>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="\kurnool" target="__blank" style="color:red"><i>kurnool</i></a>
+        <a class="dropdown-item" href="\kadapa"   target="__blank"style="color:blue"><i>kadapa</i></a>
+        <a class="dropdown-item" href="\chittoor"  style="color:black"><i>chittoor</i></a>
+        
+      </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/contact"><b>Contact</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Complaints"><b>Complaints</b></a>
+      </li>
+     
+
+    
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" id="myInput" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+          <li>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </li>
+    {% if current_user.is_authenticated %}
+       
+      <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      {{ current_user.Email }}
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="{{ url_for('logout') }}" class="btn btn-outline-warning">Logout</a>
+      <a class="dropdown-item" href="{{ url_for('profile') }}" class="btn btn-outline-warning">profile</a>
+      <a class="dropdown-item" href="{{ url_for('compl') }}" class="btn btn-outline-warning">POSTCOMPLAINT</a>
+    </div>
+  </div>
+     
+      
+      {% else %}
+      <a class="btn btn-outline-warning" href="/signup">sign up</a>
+      <a class="btn btn-outline-warning" href="/signin">sign in</a>
+
+    {% endif %}
+   </ul>
+  </div>
+</nav>

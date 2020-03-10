@@ -1,0 +1,18 @@
+
+
+  <table class="table">
+    {% extends 'layoutp.html' %}
+{% block body %}
+
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endblock %}

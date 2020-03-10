@@ -1,0 +1,16 @@
+{% extends 'layoutp.html' %}
+{% block body %}
+<br><br>
+<form action="{{ url_for('editdata',data_id=editRest.id) }}" method='POST'>
+	<label>Edit Frame</label>
+	<input type="text" name="name" value="{{ editRest.name }}">
+	<input type="submit" value="Update">
+</form>
+
+
+
+
+
+
+
+{% endblock %}

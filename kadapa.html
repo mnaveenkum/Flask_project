@@ -1,0 +1,63 @@
+{% extends 'layoutp.html' %}
+{% block body %}
+
+
+
+  
+  <div class="container-fluid">
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+      <div class="col-sm-4" align="center">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">SECTORS </button>
+        <div class="dropdown-menu ">
+        <a class="dropdown-item" href="#">REVENUE</a>
+        <a class="dropdown-item" href="#">POLICE</a>
+        <a class="dropdown-item" href="#">AGRICULTURAL</a>
+        <a class="dropdown-item" href="#">EDUCATIONAL</a>
+        </div>
+      </div>
+      <div class="col-sm-4" align="center">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Areas</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Kadapa</a>
+              <a class="dropdown-item" href="#">Badvel</a>
+              <a class="dropdown-item" href="#">Pulivendula</a>
+              <a class="dropdown-item" href="#">Kamalapuram</a>
+              <a class="dropdown-item" href="#">Atluru</a>
+               <a class="dropdown-item" href="#">Jamalamadugu</a>
+                <a class="dropdown-item" href="#">Porumamilla</a>
+                 <a class="dropdown-item" href="#">B.koduru</a>
+                  <a class="dropdown-item" href="#">Gopavaram</a>
+                   <a class="dropdown-item" href="#">kasinayana</a>
+                    <a class="dropdown-item" href="#">Rayochoti</a>
+                     <a class="dropdown-item" href="#">seetharampuram</a>
+              </div>
+
+      </div>
+      <div class="col-sm-4" align="center">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">sugestions</button>
+
+      </div>
+
+    </div>
+  </div>
+<div class="container-fluid">
+
+<div class="col-sm-9" style="padding: 20px">
+    <div class="col-sm-12" style="padding: 20px">
+        <form style="padding-left: 80px">
+          <input type="text" name="" placeholder="Your name">
+          <input type="Email" name="" placeholder="Your Email">
+          <input type="text" name="" placeholder="Your Contact">
+          <input type="text" name="" placeholder="Your Adharno">
+          <br><br>
+          <textarea class="form-control" rows="5" placeholder="Your Address"></textarea><br><br>
+          <textarea class="form-control" rows="5" placeholder="Your message"></textarea><br><br><br><br>
+          <center><button type="submit" class="btn btn-danger">Submit</button></center>
+        </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}

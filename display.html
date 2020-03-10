@@ -1,0 +1,34 @@
+
+{% extends 'layoutp.html' %}
+{% block body %}
+<br><br><br>
+<div class="container">
+	<div class="table" style="border:1px solid black">
+		<table class="table">
+			<tr>
+				<th>fname</th>
+				<th>lname</th>
+				<th>username</th>
+				<th>adharno</th>
+				<th>email</th>
+				<th>operations</th>
+			</tr>
+			{% for data in udata %}
+			<tr>
+				<td>{{ data.Fname }}</td>
+				<td>{{ data.Lname }}</td>
+				<td>{{ data.username }}</td>
+				<td>{{ data.Adharno }}</td>
+				<td>{{ data.Email }}</td>
+				<td><button class="btn btn-info"><a href="{{ url_for('editdata',data_id=data.id) }}">EDIT</a> </button>
+					<button class="btn btn-danger"><a href="{{ url_for('deletedata',data_id=data.id) }}">DELETE</a></button></td>
+				
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+</div>
+
+
+{% endblock %}

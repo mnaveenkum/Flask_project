@@ -1,0 +1,42 @@
+{% extends 'layoutp.html' %}
+{% block body %}
+<div class="container-fluid"><br><br>
+	<center><h2>Registration Form</h2></center><br>
+<div class="table col-sm-12" style="border: 1px solid black" sty>	
+
+  <h2><marquee>User registartion form</marquee></h2>
+  <center><p><b>PLEASE SIGNUP</b></p></center>
+  <form action="{{ url_for('Add_User') }}" method="POST" enctype="multipart/form-data">
+  
+  	<label for="name2" class="mb-2 mr-sm-2">Firstname:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="name2" placeholder="Enter Fname" name="Fname">
+    <label for="name1" class="mb-2 mr-sm-2">Lastname</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="name1" placeholder="Enter Lname" name="Lname">
+    <label for="name1" class="mb-2 mr-sm-2">username</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="name1" placeholder="username" name="uname">
+    <div class="form-group">
+      <label for="image">upload IMAGE</label>
+      <input type="file" class="form-control" id="" placeholder="upload image" name="file1">
+    </div>
+
+
+  
+  	<label for="pwd2" class="mb-2 mr-sm-2">*Adhar no:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="adno2" placeholder="Enter Adharno" name="adharno">
+    <label for="email2" class="mb-2 mr-sm-2">*Email:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email">
+    <label for="pwd2" class="mb-2 mr-sm-2">*Password:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd">
+    <div class="form-check mb-2 mr-sm-2">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" name="remember"> Remember me
+      </label>
+    </div>    
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</div>
+
+
+
+
+{% endblock %}

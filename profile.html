@@ -1,0 +1,23 @@
+{% extends 'layoutp.html' %}
+{% block body %}
+   <div class="container">
+   <div class="card">
+   <div class="card-header"><b>profile</b></div>
+   <div class="card-body">
+   	<div>
+   		<img src="static/upload_files/{{ current_user.image }}">
+   	</div>
+   	<h5>NAME:{{ current_user.username }}</h5>
+    <h4>phone no:{{ current_user.Adharno }}</h4>
+    </div>
+    
+ </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
